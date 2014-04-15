@@ -124,7 +124,7 @@ end
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
   Hash[*array] 
-#For large data sets I will use: Hash[array.each_slice(2).to_a]
+#Answer: For large data sets I will use Hash[array.each_slice(2).to_a]
 end
 
 # get all the letters used in an array of words and return
@@ -132,6 +132,7 @@ end
 # . e.g. the array ['cat', 'dog', 'fish'] becomes
 # ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
 def get_all_letters_in_array_of_words(array)
+  array.join.split(//).sort
 end
 
 # swap the keys and values in a hash. e.g.
