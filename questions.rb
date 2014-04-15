@@ -176,6 +176,7 @@ end
 # get the domain name *without* the .com part, from an email address
 # so alex@makersacademy.com becomes makersacademy
 def get_domain_name_from_email_address(email)
+  email[/(\w+)m./]
 end
 
 # capitalize the first letter in each word of a string, 
