@@ -258,6 +258,9 @@ end
 # and 1 that is 4 letters long. Return it as a hash in the format
 # word_length => count, e.g. {2 => 1, 3 => 5, 4 => 1}
 def count_words_of_each_length_in_a_file(file_path)
+  words = IO.read(file_path).scan(/\w+/)
+  totals = Hash.new(0)
+  words.each { |w| totals[w.length] += 1 } and return totals
 end
 
 # implement fizzbuzz without modulo, i.e. the % method
@@ -265,7 +268,6 @@ end
 # (there's no RSpec test for this one)
 def fizzbuzz_without_modulo
 end
-
 # print the lyrics of the song 99 bottles of beer on the wall
 # http://www.99-bottles-of-beer.net/lyrics.html
 # make sure you use the singular when you have one bottle of 
