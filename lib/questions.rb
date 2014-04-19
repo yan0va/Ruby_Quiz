@@ -266,8 +266,12 @@ end
 # implement fizzbuzz without modulo, i.e. the % method
 # go from 1 to 100
 # (there's no RSpec test for this one)
-def fizzbuzz_without_modulo
+def fizzbuzz(n)
+  f = n % 3 == 0 ? "Fizz" : nil
+  b = n % 5 == 0 ? "Buzz" : nil
+  f || b ? "#{ f }#{ b }" : n
 end
+
 # print the lyrics of the song 99 bottles of beer on the wall
 # http://www.99-bottles-of-beer.net/lyrics.html
 # make sure you use the singular when you have one bottle of 
