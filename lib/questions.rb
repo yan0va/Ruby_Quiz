@@ -279,4 +279,13 @@ end
 # at the end.
 # (there's no RSpec test for this one)
 def ninety_nine_bottles_of_beer
+  99.downto(1) do |n|
+    nouns = Hash.new("bottles")
+    nouns[1] = "bottle"
+
+    puts "#{n} #{nouns[n]} of beer on the wall, #{n} #{nouns[n]} of beer"
+    puts "Take one down, pass it around, #{n-1} #{nouns[n-1]} of beer on the wall\n\n" if n > 1
+  end
+  puts "No more bottles of beer on the wall, no more bottles of beer :("
+  puts "Go to the store and buy some more, 99 bottles of beer on the wall!!! :)"
 end
